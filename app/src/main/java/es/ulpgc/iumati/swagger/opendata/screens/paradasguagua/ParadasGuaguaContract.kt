@@ -4,27 +4,22 @@ import androidx.lifecycle.LiveData
 
 interface ParadasGuaguaContract {
 
-  interface View {
-    var presenter: Presenter
-    //fun displayData(viewModel: ParadasGuaguaViewModel)
-  }
+    interface View {
+        var presenter: Presenter
+    }
 
-  interface Presenter {
-    //fun fetchData()
-    fun fetchLiveData(): LiveData<ParadasGuaguaViewModel>
-  }
+    interface Presenter {
+        fun fetchLiveData(): LiveData<ParadasGuaguaViewModel>
+    }
 
-  interface Model {
-    //fun fetchData(): ParadasGuaguaData?
-    //fun fetchLiveData(): LiveData<ParadasGuaguaData>
-    fun fetchBgLiveData(): LiveData<ParadasGuaguaData>
-  }
+    interface Model {
+        fun fetchBgLiveData(): LiveData<ParadasGuaguaData>
+    }
 
-  interface Router {
-    fun passDataToNextScreen(data: ParadasGuaguaData?)
-    fun getDataFromPreviousScreen(): ParadasGuaguaData?
-    fun navigateToNextScreen()
-    //fun replaceScreenContent()
-  }
+    interface Router {
+        fun passDataToNextScreen(data: ParadasGuaguaData?)
+        fun getDataFromPreviousScreen(): ParadasGuaguaData?
+        fun navigateToNextScreen()
+    }
 
 }
