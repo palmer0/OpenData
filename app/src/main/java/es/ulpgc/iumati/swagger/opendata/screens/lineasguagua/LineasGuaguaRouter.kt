@@ -1,15 +1,18 @@
-package es.ulpgc.iumati.swagger.opendata.screens.paradasguagua
+package es.ulpgc.iumati.swagger.opendata.screens.lineasguagua
 
 import android.content.Intent
-import android.util.Log
-import androidx.fragment.app.FragmentActivity
 import java.lang.ref.WeakReference
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import android.util.Log
 
-class ParadasGuaguaRouter : ParadasGuaguaContract.Router {
+import es.ulpgc.iumati.swagger.opendata.R
+
+class LineasGuaguaRouter : LineasGuaguaContract.Router {
 
     var activity: WeakReference<FragmentActivity>? = null
 
-    override fun passDataToNextScreen(data: ParadasGuaguaData?) {
+    override fun passDataToNextScreen(data: LineasGuaguaData?) {
         Log.e(TAG, "passDataToNextScreen()")
 
         /*
@@ -19,11 +22,10 @@ class ParadasGuaguaRouter : ParadasGuaguaContract.Router {
         */
     }
 
-    override fun getDataFromPreviousScreen(): ParadasGuaguaData? {
+    override fun getDataFromPreviousScreen(): LineasGuaguaData? {
         Log.e(TAG, "getDataFromPreviousScreen()")
 
-        var data: ParadasGuaguaData? = null
-
+        var data: LineasGuaguaData? = null
 
         /*
         (activity?.get()?.application as AppMediator).let { mediator ->
@@ -38,12 +40,12 @@ class ParadasGuaguaRouter : ParadasGuaguaContract.Router {
         Log.e(TAG, "navigateToNextScreen()")
 
         activity?.get()?.let { context ->
-            val intent = Intent(context, ParadasGuaguaActivity::class.java)
+            val intent = Intent(context, LineasGuaguaActivity::class.java)
             context.startActivity(intent)
         }
     }
 
     companion object {
-        const val TAG = "ParadasGuaguaRouter"
+        const val TAG = "LineasGuaguaRouter"
     }
 }
