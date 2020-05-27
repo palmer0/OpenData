@@ -1,9 +1,8 @@
 package es.ulpgc.iumati.swagger.opendata.screens.lineasguagua
 
-import java.lang.ref.WeakReference
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProviders
+import java.lang.ref.WeakReference
 
 object LineasGuaguaScreen {
 

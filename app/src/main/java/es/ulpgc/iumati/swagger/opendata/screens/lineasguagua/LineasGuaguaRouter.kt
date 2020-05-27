@@ -1,12 +1,9 @@
 package es.ulpgc.iumati.swagger.opendata.screens.lineasguagua
 
 import android.content.Intent
-import java.lang.ref.WeakReference
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import android.util.Log
-
-import es.ulpgc.iumati.swagger.opendata.R
+import androidx.fragment.app.FragmentActivity
+import java.lang.ref.WeakReference
 
 class LineasGuaguaRouter : LineasGuaguaContract.Router {
 

@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import es.ulpgc.iumati.swagger.opendata.R
 import io.swagger.client.models.FeatureLineaGuagua
-import io.swagger.client.models.FeatureParadaGuagua
 
 
 class LineasGuaguaAdapter(

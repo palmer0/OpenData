@@ -1,18 +1,12 @@
 package es.ulpgc.iumati.swagger.opendata.screens.lineasguagua
 
-import android.util.Log
-import java.lang.ref.WeakReference
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import es.ulpgc.iumati.swagger.opendata.OpenDataApi
-import java.util.concurrent.Executors
-
-import es.ulpgc.iumati.swagger.opendata.R
-import es.ulpgc.iumati.swagger.opendata.screens.paradasguagua.ParadasGuaguaData
 import io.swagger.client.models.FeatureLineaGuagua
-import io.swagger.client.models.FeatureParadaGuagua
+import java.lang.ref.WeakReference
+import java.util.concurrent.Executors
 
 data class LineasGuaguaData(
     val features: Array<FeatureLineaGuagua>
