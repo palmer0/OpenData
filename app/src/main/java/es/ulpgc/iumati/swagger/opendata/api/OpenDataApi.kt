@@ -1,4 +1,4 @@
-package es.ulpgc.iumati.swagger.opendata
+package es.ulpgc.iumati.swagger.opendata.api
 
 import android.util.Log
 import com.github.kittinunf.fuel.Fuel

@@ -3,7 +3,7 @@ package es.ulpgc.iumati.swagger.opendata.screens.lineasguagua
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import es.ulpgc.iumati.swagger.opendata.OpenDataApi
+import es.ulpgc.iumati.swagger.opendata.api.OpenDataApi
 import io.swagger.client.models.FeatureLineaGuagua
 import java.lang.ref.WeakReference
 import java.util.concurrent.Executors
@@ -18,7 +18,8 @@ class LineasGuaguaModel(
 
     private val liveData = MutableLiveData<LineasGuaguaData>()
 
-    private val api = OpenDataApi()
+    private val api =
+        OpenDataApi()
 
     override fun fetchBgLiveData(): LiveData<LineasGuaguaData> {
 
