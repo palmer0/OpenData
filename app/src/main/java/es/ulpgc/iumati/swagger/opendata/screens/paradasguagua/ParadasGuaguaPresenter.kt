@@ -9,7 +9,7 @@ import io.swagger.client.models.FeatureParadaGuagua
 import java.lang.ref.WeakReference
 
 data class ParadasGuaguaViewModel(
-    var features: Array<FeatureParadaGuagua>
+    val features: Array<FeatureParadaGuagua>
 )
 
 class ParadasGuaguaPresenter : ParadasGuaguaContract.Presenter {

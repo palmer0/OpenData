@@ -16,8 +16,7 @@ class ParadasGuaguaModel(
     var activity: WeakReference<FragmentActivity>? = null
 ) : ParadasGuaguaContract.Model {
 
-    private val api =
-        OpenDataApi()
+    private val api = OpenDataApi()
 
     private val liveData = MutableLiveData<ParadasGuaguaData>()
 

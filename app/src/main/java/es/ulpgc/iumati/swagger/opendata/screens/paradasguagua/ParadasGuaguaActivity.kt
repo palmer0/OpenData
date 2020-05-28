@@ -26,7 +26,7 @@ class ParadasGuaguaActivity : AppCompatActivity(), ParadasGuaguaContract.View {
         recyclerView.layoutManager = recyclerLayoutManager
 
         // Do the setup
-        ParadasGuaguaScreen.configureActivity(this)
+        ParadasGuaguaScreen.configure(this)
 
         // Call the presenter to fetch the data
         presenter.fetchLiveData().observe(this, Observer { viewModel ->

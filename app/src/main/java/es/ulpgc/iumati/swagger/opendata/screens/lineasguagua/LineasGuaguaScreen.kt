@@ -6,7 +6,7 @@ import java.lang.ref.WeakReference
 
 object LineasGuaguaScreen {
 
-    fun configureActivity(view: LineasGuaguaContract.View) {
+    fun configure(view: LineasGuaguaContract.View) {
 
         val activity = view as FragmentActivity
 

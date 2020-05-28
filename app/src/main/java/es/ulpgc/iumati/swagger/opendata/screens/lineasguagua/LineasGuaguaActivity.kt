@@ -28,7 +28,7 @@ class LineasGuaguaActivity : AppCompatActivity(), LineasGuaguaContract.View {
 
 
         // Do the setup
-        LineasGuaguaScreen.configureActivity(this)
+        LineasGuaguaScreen.configure(this)
 
         // Call the presenter to fetch the data
         presenter.fetchLiveData().observe(this, Observer { viewModel ->
