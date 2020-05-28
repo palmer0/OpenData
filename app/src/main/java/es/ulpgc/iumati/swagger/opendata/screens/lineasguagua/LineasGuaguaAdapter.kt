@@ -24,7 +24,7 @@ class LineasGuaguaAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.content_parada_guagua, parent, false)
+            .inflate(R.layout.content_lineas_guagua, parent, false)
 
         view.setOnClickListener { v ->
             this.onClick(v)
@@ -39,6 +39,8 @@ class LineasGuaguaAdapter(
         holder.let { vh ->
 
             val feature = features[position]
+            vh.itemView.tag = feature
+
             feature.attributes?.let { attributes ->
                 vh.titleTextView.text = attributes.Linea.toString()
                 vh.bodyTextView.text = attributes.Recorrido
@@ -47,11 +49,8 @@ class LineasGuaguaAdapter(
 
     }
 
-
     override fun getItemCount(): Int {
 
         return this.features.size
     }
-
-
 }

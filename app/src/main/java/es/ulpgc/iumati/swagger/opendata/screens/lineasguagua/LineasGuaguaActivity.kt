@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import es.ulpgc.iumati.swagger.opendata.R
+import io.swagger.client.models.FeatureLineaGuagua
 
 class LineasGuaguaActivity : AppCompatActivity(), LineasGuaguaContract.View {
 
@@ -37,12 +38,13 @@ class LineasGuaguaActivity : AppCompatActivity(), LineasGuaguaContract.View {
         presenter.fetchLiveData().observe(this, Observer { viewModel ->
             Log.e(TAG, "fetchLiveData()")
 
-            this.adapter = LineasGuaguaAdapter(viewModel.features)
+            adapter = LineasGuaguaAdapter(viewModel.features)
             recycler = adapter!!
             recyclerView.adapter = recycler
             recycler.notifyDataSetChanged()
             adapter?.onClick = { view ->
-
+                val feature = view.tag as FeatureLineaGuagua
+                presenter.navigateToNextScreen(feature);
             }
         })
 

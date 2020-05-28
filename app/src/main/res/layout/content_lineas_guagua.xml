@@ -21,8 +21,8 @@
                 android:id="@+id/title_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="6dp"
                 android:text="Title"
+                android:padding="6dp"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

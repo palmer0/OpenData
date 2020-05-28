@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import es.ulpgc.iumati.swagger.opendata.screens.lineaguagua.LineaGuaguaData
 import io.swagger.client.models.FeatureLineaGuagua
 import java.lang.ref.WeakReference
 
@@ -64,6 +65,11 @@ class LineasGuaguaPresenter : LineasGuaguaContract.Presenter {
         }
 
         return liveData
+    }
+
+    override fun navigateToNextScreen(feature: FeatureLineaGuagua) {
+        router.passDataToNextScreen(LineaGuaguaData(feature))
+        router.navigateToNextScreen()
     }
 
     companion object {

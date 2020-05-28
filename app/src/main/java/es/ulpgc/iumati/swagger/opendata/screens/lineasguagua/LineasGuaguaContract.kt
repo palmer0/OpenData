@@ -1,6 +1,8 @@
 package es.ulpgc.iumati.swagger.opendata.screens.lineasguagua
 
 import androidx.lifecycle.LiveData
+import es.ulpgc.iumati.swagger.opendata.screens.lineaguagua.LineaGuaguaData
+import io.swagger.client.models.FeatureLineaGuagua
 
 interface LineasGuaguaContract {
 
@@ -10,6 +12,7 @@ interface LineasGuaguaContract {
 
     interface Presenter {
         fun fetchLiveData(): LiveData<LineasGuaguaViewModel>
+        fun navigateToNextScreen(feature: FeatureLineaGuagua)
     }
 
     interface Model {
@@ -17,7 +20,7 @@ interface LineasGuaguaContract {
     }
 
     interface Router {
-        fun passDataToNextScreen(data: LineasGuaguaData?)
+        fun passDataToNextScreen(data: LineaGuaguaData)
         fun getDataFromPreviousScreen(): LineasGuaguaData?
         fun navigateToNextScreen()
     }

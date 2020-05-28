@@ -24,7 +24,7 @@ class ParadasGuaguaAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.content_parada_guagua, parent, false)
+            .inflate(R.layout.content_paradas_guagua, parent, false)
 
         view.setOnClickListener { v ->
             this.onClick(v)
@@ -39,6 +39,8 @@ class ParadasGuaguaAdapter(
         holder.let { vh ->
 
             val feature = features[position]
+            vh.itemView.tag = feature
+
             feature.attributes?.let { attributes ->
                 vh.titleTextView.text = attributes.PARADA
                 vh.bodyTextView.text = attributes.LINEAS
