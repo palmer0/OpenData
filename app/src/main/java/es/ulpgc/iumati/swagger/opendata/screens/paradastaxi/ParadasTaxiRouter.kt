@@ -1,29 +1,31 @@
-package es.ulpgc.iumati.swagger.opendata.screens.lineasguagua
+package es.ulpgc.iumati.swagger.opendata.screens.paradastaxi
 
 import android.content.Intent
-import android.util.Log
-import androidx.fragment.app.FragmentActivity
-import es.ulpgc.iumati.swagger.opendata.app.AppMediator
-import es.ulpgc.iumati.swagger.opendata.screens.lineaguagua.LineaGuaguaActivity
-import es.ulpgc.iumati.swagger.opendata.screens.lineaguagua.LineaGuaguaData
 import java.lang.ref.WeakReference
+import androidx.fragment.app.FragmentActivity
+import android.util.Log
 
-class LineasGuaguaRouter : LineasGuaguaContract.Router {
+import es.ulpgc.iumati.swagger.opendata.app.AppMediator
+import es.ulpgc.iumati.swagger.opendata.screens.paradataxi.ParadaTaxiActivity
+import es.ulpgc.iumati.swagger.opendata.screens.paradataxi.ParadaTaxiData
+
+class ParadasTaxiRouter : ParadasTaxiContract.Router {
 
     var activity: WeakReference<FragmentActivity>? = null
 
-    override fun passDataToNextScreen(data: LineaGuaguaData) {
+    override fun passDataToNextScreen(data: ParadaTaxiData) {
         Log.e(TAG, "passDataToNextScreen()")
 
         (activity?.get()?.application as AppMediator).let { mediator ->
-            mediator.lineaGuagua = data
+          mediator.paradaTaxi = data
         }
     }
 
-    override fun getDataFromPreviousScreen(): LineasGuaguaData? {
+    //TODO: poner tipo correcto para retornar
+    override fun getDataFromPreviousScreen(): ParadasTaxiData? {
         Log.e(TAG, "getDataFromPreviousScreen()")
 
-        var data: LineasGuaguaData? = null
+        var data: ParadasTaxiData? = null
 
         /*
         (activity?.get()?.application as AppMediator).let { mediator ->
@@ -38,12 +40,13 @@ class LineasGuaguaRouter : LineasGuaguaContract.Router {
         Log.e(TAG, "navigateToNextScreen()")
 
         activity?.get()?.let { context ->
-            val intent = Intent(context, LineaGuaguaActivity::class.java)
+            val intent = Intent(context, ParadaTaxiActivity::class.java)
             context.startActivity(intent)
         }
     }
 
+
     companion object {
-        const val TAG = "LineasGuaguaRouter"
+        const val TAG = "ParadasTaxiRouter"
     }
 }

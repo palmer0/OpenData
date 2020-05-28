@@ -44,7 +44,7 @@ class LineaGuaguaPresenter : LineaGuaguaContract.Presenter {
 
             //val data = mediator.data
             //updateState(data)
-            model.setLiveData(mediator.data)
+            model.setLiveData(mediator.lineaGuagua)
         }
 
         // Call the model

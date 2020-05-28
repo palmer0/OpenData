@@ -15,10 +15,11 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".screens.paradasguagua.ParadasGuaguaActivity"/>
-
         <activity android:name=".screens.lineaguagua.LineaGuaguaActivity"/>
+        <activity android:name=".screens.lineasguagua.LineasGuaguaActivity"/>
+        <activity android:name=".screens.paradataxi.ParadaTaxiActivity"/>
 
-        <activity android:name=".screens.lineasguagua.LineasGuaguaActivity">
+        <activity android:name=".screens.paradastaxi.ParadasTaxiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
