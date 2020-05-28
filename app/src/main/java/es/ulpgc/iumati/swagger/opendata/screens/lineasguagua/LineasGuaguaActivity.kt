@@ -22,6 +22,9 @@ class LineasGuaguaActivity : AppCompatActivity(), LineasGuaguaContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lineas_guagua)
 
+        supportActionBar?.title = getString(R.string.title_lineas_guagua)
+
+
         recyclerView = findViewById(R.id.recycler_view)
         recyclerLayoutManager = LinearLayoutManager(applicationContext)
         recyclerView.layoutManager = recyclerLayoutManager

@@ -21,6 +21,8 @@ class ParadasGuaguaActivity : AppCompatActivity(), ParadasGuaguaContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_paradas_guagua)
 
+        supportActionBar?.title = getString(R.string.title_paradas_guagua)
+
         recyclerView = findViewById(R.id.recycler_view)
         recyclerLayoutManager = LinearLayoutManager(applicationContext)
         recyclerView.layoutManager = recyclerLayoutManager
